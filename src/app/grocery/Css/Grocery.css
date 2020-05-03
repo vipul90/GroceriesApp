@@ -1,0 +1,9 @@
+.cell{
+    border:1px solid black;
+    padding: 3px;
+}
+
+.groceryTable{
+    border-spacing: 0px;
+    border:1px solid black;
+}
