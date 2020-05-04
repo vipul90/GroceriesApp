@@ -1,20 +1,14 @@
 import constants from '../Helpers/commonConstants'
 import GroceryDetailItem from '../Helpers/GroceryDetail'
+import DateValue from '../Helpers/Utils'
 
-const currentDate = new Date();
-
-const date = currentDate.getDate();
-const month = currentDate.getMonth(); 
-const year = currentDate.getFullYear();
-
-const dateString = date + "-" +(month + 1) + "-" + year;
 const initialState = {
     loading: false,
     error: null,
     groceryItems: [
-        new GroceryDetailItem(1,'Item 1',2,dateString),
-        new GroceryDetailItem(2,'Item 2',3,dateString),
-        new GroceryDetailItem(3,'Item 3',4,dateString)
+        new GroceryDetailItem(1,'Item 1',2,DateValue),
+        new GroceryDetailItem(2,'Item 2',3,DateValue),
+        new GroceryDetailItem(3,'Item 3',4,DateValue)
     ],
     CurrentItemId:3
   };
@@ -39,6 +33,18 @@ const initialState = {
                 return { 
                     ...state,
                     groceryItems: state.groceryItems.filter(x=>x.ItemId != payload.ItemId)
+                }
+            case constants.UPDATE_GROCERY_ITEM :
+                
+                return { 
+                    ...state,
+                    groceryItems: state.groceryItems.map(item =>{
+                        if(item.ItemId == payload.ItemId){
+                            return payload;
+                        } else{
+                            return item;
+                        }
+                    })
                 }
             default:
             return state;

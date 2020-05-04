@@ -30,6 +30,9 @@ class GroceryList extends React.Component {
             }
           });
     }
+    SaveItemFromGroceryList(item,dispatch){
+            dispatch(actions.UpdateItemInGrocery(item));
+    }
 
     render(){
         return (
@@ -40,8 +43,12 @@ class GroceryList extends React.Component {
                 </thead>
                 <tbody>
                     {this.props.Groceries.map(item =>{
-                        return <GroceryListItem key={item.ItemId} ItemDetail = {item} RemoveFn={this.RemoveItemFromGroceryList}
-                        DispatchFn ={this.props.dispatch}></GroceryListItem>
+                        return <GroceryListItem 
+                        key={item.ItemId} 
+                        ItemDetail = {item}
+                        RemoveFn={this.RemoveItemFromGroceryList}
+                        DispatchFn ={this.props.dispatch}
+                        SaveFn = {this.SaveItemFromGroceryList}></GroceryListItem>
                     })}
                 </tbody>
                 </table>
