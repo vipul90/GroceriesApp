@@ -4,7 +4,7 @@ import GroceryDetailItem from '../Helpers/GroceryDetail'
 const currentDate = new Date();
 
 const date = currentDate.getDate();
-const month = currentDate.getMonth(); //Be careful! January is 0 not 1
+const month = currentDate.getMonth(); 
 const year = currentDate.getFullYear();
 
 const dateString = date + "-" +(month + 1) + "-" + year;
@@ -35,8 +35,14 @@ const initialState = {
                     groceryItems: [...state.groceryItems, payload],
                     CurrentItemId : state.CurrentItemId + 1
                 }
+            case constants.REMOVE_GROCERY_ITEM :
+                return { 
+                    ...state,
+                    groceryItems: state.groceryItems.filter(x=>x.ItemId != payload.ItemId)
+                }
+            default:
+            return state;
         }
-    return state;
   }
 
   export default GroceryDetails;

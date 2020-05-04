@@ -7,4 +7,11 @@ const AddItemInGrocery = (payload) =>{
     }
 }
 
-export {AddItemInGrocery}
+const RemoveItemInGrocery = (payload) =>{
+    return {
+        type:constants.REMOVE_GROCERY_ITEM,
+        payload : payload
+    }
+}
+
+export {AddItemInGrocery,RemoveItemInGrocery}

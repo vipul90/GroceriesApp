@@ -11,3 +11,7 @@
 .spanRightMargin{
     margin-right: 16px;
 }
+
+.buttonFloat{
+   float: right;
+}
