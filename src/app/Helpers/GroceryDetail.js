@@ -1,5 +1,6 @@
 class GroceryDetailItem {
-    constructor(itemName, quantity, date){
+    constructor(itemId , itemName, quantity, date){
+        this.ItemId= itemId;
         this.ItemName = itemName;
         this.Quantity = quantity;
         this.Date = date;

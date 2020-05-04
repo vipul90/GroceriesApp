@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+// const restPlugin = require("transform-object-rest-spread");
 // import * as HtmlWebPackPlugin  from 'html-webpack-plugin'
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./public/index.html",

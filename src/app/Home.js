@@ -6,7 +6,7 @@ export default class Home extends Component {
         return (
 
                 <div>
-                <h1>Simple SPA</h1>
+                <h1>Grocery App</h1>
                 <ul className="header">
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/AddItem">Add Item</NavLink></li>

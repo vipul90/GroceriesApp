@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class GroceryItem extends React.Component {
+export default class GroceryListItem extends React.Component {
   
     constructor(){
         super();
