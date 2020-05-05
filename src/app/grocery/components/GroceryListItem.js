@@ -4,7 +4,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import SaveIcon from '@material-ui/icons/Save';
 import CancelIcon from '@material-ui/icons/Cancel';
 import CustomDropdown from './CustomDropdown';
-import GroceryDetailItem from '../../Helpers/GroceryDetail'
+import GroceryDetailItem from '../../Helpers/GroceryDetailItem'
 import DateValue from '../../Helpers/Utils'
 
 export default class GroceryListItem extends React.Component {

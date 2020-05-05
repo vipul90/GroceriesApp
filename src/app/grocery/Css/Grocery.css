@@ -15,3 +15,32 @@
 .buttonFloat{
    float: right;
 }
+
+.gridContainer{
+    max-width: 200px;
+}
+.gridCell{
+  
+}
+.CardRoot{
+    max-height: 200px;
+}
+
+.CardButton{
+    float: right;
+    border-radius: 8px;
+ }
+
+ .spanCardActions {
+    margin-left: 16px;
+    margin-right: 16px;
+    position: relative;
+    top: -0.4em;
+ }
+
+ .spanMargin {
+    margin-left: 16px;
+    /* margin-right: 16px; */
+    position: relative;
+    top: 0.8em;
+ }

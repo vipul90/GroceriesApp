@@ -1,9 +1,12 @@
 class GroceryDetailItem {
-    constructor(itemId , itemName, quantity, date){
+    constructor(itemId , itemName, quantity, date,price,productMeasuremnetUnit,imageName){
         this.ItemId= itemId;
         this.ItemName = itemName;
         this.Quantity = quantity;
-        this.Date = date;
+        // this.Date = date;
+        this.Price = price;
+        this.ProductMeasuremnetUnit = productMeasuremnetUnit;
+        this.ImageName = imageName;
     }
     // get ItemName(){
     //     return this.ItemName;

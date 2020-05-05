@@ -3,7 +3,7 @@ import DetailLineItem from './DetailLineItem';
 import '../Css/Grocery.css'; 
 import {Button} from '@material-ui/core'
 
-import GroceryDetailItem from '../../Helpers/GroceryDetail'
+import GroceryDetailItem from '../../Helpers/GroceryDetailItem'
 import { connect } from 'react-redux';
 import * as actions from '../../action/actionCreators'
 import DateValue from '../../Helpers/Utils'

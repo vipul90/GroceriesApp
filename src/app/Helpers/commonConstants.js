@@ -1,7 +1,8 @@
 const constants ={
-    ADD_GROCERY_ITEM : 'AddGroceryItem',
-    REMOVE_GROCERY_ITEM : 'RemoveGroceryItem',
-    UPDATE_GROCERY_ITEM : 'UpdateGroceryItem'
+    ADD_USER_GROCERY_ITEM : 'AddUserGroceryItem',
+    REMOVE_USER_GROCERY_ITEM : 'RemoveUserGroceryItem',
+    INCREASE_USER_GROCERY_ITEM : 'IncreaseUserGroceryItem',
+    DECREASE_USER_GROCERY_ITEM : 'DecreaseUserGroceryItem'
 }
 
 export default constants;

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Switch, Route, BrowserRouter as Router } from "react-router-dom";
-import GroceryDetails from './grocery/Js/GroceryDetails'
-import GroceryList from './grocery/Js/GroceryList'
+import GroceryDetails from './grocery/components/GroceryDetails'
+// import UserGroceryList from './grocery/components/UserGroceryList'
 import {history } from './services/history'
 import Home from './Home'
 import Store from './store/store'
@@ -16,10 +16,10 @@ export default class AppRoutes extends React.Component {
 
                 <div className="App">
                     <Home />
-                    <Switch>
-                        <Route exact path="/" component={GroceryList}/>
+                    {/* <Switch>
+                        <Route exact path="/" component={GroceryDetails}/>
                         <Route path="/AddItem" component={GroceryDetails}/>
-                    </Switch>
+                    </Switch> */}
                 </div>
             </Provider>
 

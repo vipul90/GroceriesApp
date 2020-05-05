@@ -2,13 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux';
 import GroceryListItem from './GroceryListItem'
 import '../Css/Grocery.css'; 
-import GroceryDetailItem from '../../Helpers/GroceryDetail'
+import GroceryDetailItem from '../../Helpers/GroceryDetailItem'
 import * as actions from '../../action/actionCreators'
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import {Button} from '@material-ui/core'
 
-class GroceryList extends React.Component {
+class UserGroceryList extends React.Component {
     constructor(props){
         super(props);
     }
@@ -60,8 +60,8 @@ class GroceryList extends React.Component {
 }
 
 export default connect((state, props) =>{
-    // console.log( state.GroceryDetails.groceryItems.length);
+    // console.log( state.GroceryDetails.userGroceryItems.length);
     return {
-        Groceries : state.GroceryDetails.groceryItems
+        Groceries : state.GroceryDetails.userGroceryItems
     }
-})(GroceryList);
+})(UserGroceryList);
