@@ -11,7 +11,7 @@ const {type, payload} = action;
             payload.Id = state.CurrentItemId + 1;
             //  console.log('test');
             // var newList = Object.assign({},state.userGroceryItems,(payload));
-            //  console.log(newList);
+            //  console.log("Paylod is ",payload);
             // var newState = Object.assign({},state,{userGroceryItems : state.userGroceryItems.concat(payload)});
             // return newState;
             return { 
@@ -29,7 +29,7 @@ const {type, payload} = action;
             ...state,
             userGroceryItems: state.userGroceryItems.map(item =>{
                 if(item.Id == payload.Id){
-                    var newObj = new UserGroceryItem(item.Id, item.ItemId,DateValue,item.Quantity - 1);
+                    var newObj = new UserGroceryItem(item.Id, item.ItemId,DateValue,item.Quantity - 1,item.Price);
                     return newObj;
                 } else{
                     return item;
@@ -42,7 +42,7 @@ const {type, payload} = action;
                 ...state,
                 userGroceryItems: state.userGroceryItems.map(item =>{
                     if(item.Id == payload.Id){
-                        var newObj = new UserGroceryItem(item.Id, item.ItemId,DateValue,item.Quantity + 1);
+                        var newObj = new UserGroceryItem(item.Id, item.ItemId,DateValue,item.Quantity + 1,item.Price);
                         return newObj;
                     } else{
                         return item;

@@ -51,37 +51,13 @@
  .priceCell{
      font-size: 1.2em;
  }
- .totalCell{
-    font-size: 1.2em;
-    text-align: right;
-    width: 75%;
- }
- .deleteCell{
-    text-align: right;
-    /* padding-right: .5em; */
- }
-
- .deleteCell2{
-    text-align: center;
-    /* padding-right: .5em; */
- }
-
+ 
  .gridCell{
      padding-top: .1em;
  }
 
-.bottomDiv{
-    height: 100%;
-}
 
-.priceDiv{
-    height: 50%;
-    padding-top: 15%;
-    font-size: 1.2em;
-}
-
-.priceDivOld{
-    height: 50%;
-    padding-top: 15%;
-    font-size: 1.2em;
+ .gridTotal{
+    /* background-color: red; */
+    text-align: right;
 }

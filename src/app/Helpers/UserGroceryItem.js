@@ -5,9 +5,9 @@ class UserGroceryItem {
         this.Date = date;
         this.Price = price;
         this.ProductMeasuremnetUnit = productMeasuremnetUnit;
-        this.Total = this.Quantity * this.Price;
-        // this.ItemName = itemName;
         this.Quantity = quantity;
+        this.Total = (this.Quantity) * (this.Price);
+        // this.ItemName = itemName;
     }
     // get ItemName(){
     //     return this.ItemName;

@@ -5,6 +5,7 @@ import UserGroceryItem from './UserGroceryItem'
 import {connect} from 'react-redux'
 import * as actionCreators from '../../../action/actionCreators'
 import {bindActionCreators} from 'redux'
+import "@babel/polyfill"
 
 class UserGroceryList extends React.Component {
     constructor(props){
@@ -17,7 +18,7 @@ class UserGroceryList extends React.Component {
                 <Grid container spacing = {2}>
                 {this.props.UserGroceries.map(item=>{
                       return <UserGroceryItem 
-                      key={item.ItemId} 
+                      key={item.Id} 
                       UserDataForItem = {item}
                       AddItemFn = {this.props.AddItemInUserGroceryList}
                       IncreaseItemFn = {this.props.IncreaseItemInUserGroceryList}
@@ -27,6 +28,25 @@ class UserGroceryList extends React.Component {
                       </UserGroceryItem>
                 })}
                 </Grid>
+                <div>
+                    {/* {this.props.UserGroceries.length > 0 ? */}
+                <Grid container>
+                    <Grid item xs={12} sm={12}  md={10} lg={12} className="">
+                        <hr />
+                    </Grid>
+                    <Grid item xs={12} sm={12}  md={10} lg={12} className="">
+                        <Grid container>
+                            <Grid item xs={10} sm={10}  md={10} lg={10} className="gridTotal">
+                                Total is : 
+                            </Grid>
+                            <Grid item xs={2} sm={2}  md={2} lg={2} className="gridTotalValue">
+                               <strong>&#x20B9;{this.props.UserGroceries.reduce((prev,next)=>{ return prev + next.Total; },0)} </strong>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+              
+                </div> 
             </div>
         );
     }

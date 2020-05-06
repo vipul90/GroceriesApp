@@ -114,7 +114,7 @@ export default function UserGroceryCard(props) {
                         </span>
                     </Grid>
                     <Grid item xs={2} sm={2}  md={1} lg={1} className="priceItem" >
-                        <div className="priceCell"><strong>&#x20B9;{userDetail.Quantity * productDetail.Price}</strong></div>
+                        <div className="priceCell"><strong>&#x20B9;{userDetail.Total}</strong></div>
                     </Grid>
                 
                 </Grid>

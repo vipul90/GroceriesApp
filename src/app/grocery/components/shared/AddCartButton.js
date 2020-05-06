@@ -10,8 +10,9 @@ class AddCartButton extends React.Component {
     constructor(props){
         super(props);
     }
-    AddUserGroceryItem(itemId){
-        let payload = new UserGroceryItem(-1,itemId,DateValue,1);
+    AddUserGroceryItem(itemId,itemPrice){
+      console.log(itemPrice);
+        let payload = new UserGroceryItem(-1,itemId,DateValue,1,itemPrice);
         this.props.AddItemFn(payload);
       }
       IncreaseUserGroceryItem(userItemId){
@@ -34,11 +35,12 @@ class AddCartButton extends React.Component {
        return (
            <React.Fragment>
                 {(userDetail===undefined || userDetail.Quantity === 0) ? <Button variant="contained" color="primary" size="small" 
-                onClick={this.AddUserGroceryItem.bind(this,productDetail.ItemId)}>
+                onClick={this.AddUserGroceryItem.bind(this,productDetail.ItemId,productDetail.Price)}>
                 Add To Cart
                 </Button> : 
                 (<div >
-                    <RemoveCircleOutlineIcon onClick={this.DecreaseOrRemoveUserGroceryItem.bind(this,userDetail.Id,userDetail.Quantity)}/>
+                    <RemoveCircleOutlineIcon 
+                    onClick={this.DecreaseOrRemoveUserGroceryItem.bind(this,userDetail.Id,userDetail.Quantity)}/>
                     <span className="spanCardActions">{userDetail.Quantity}</span>
                     {userDetail.Quantity !== productDetail.Quantity ?
                         <AddCircleOutlineIcon  onClick={this.IncreaseUserGroceryItem.bind(this,userDetail.Id)}/> :

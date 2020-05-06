@@ -5,6 +5,7 @@ import ProductItem from './ProductItem'
 import {connect} from 'react-redux'
 import * as actionCreators from '../../action/actionCreators'
 import {bindActionCreators} from 'redux'
+import "@babel/polyfill"
 
 class ProductGroceryList extends React.Component {
     constructor(props){
@@ -14,7 +15,7 @@ class ProductGroceryList extends React.Component {
     render(){
         return (
             <div>
-                <Grid container spacing={3} >
+                <Grid container spacing={2} >
                 {this.props.AvailableGroceries.map(item=>{
                       return <ProductItem 
                       key={item.ItemId} 
