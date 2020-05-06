@@ -12,13 +12,7 @@ class ProductItem extends React.Component {
             <Grid item xs={12} sm={6}  md={4} lg={2} className="gridCell">
                 {/* {this.props.ProductDetail.ItemName} */}
                
-                <ProductCard ProductDetail = {this.props.ProductDetail} 
-                UserDataForItem= {this.props.UserDataForItem}
-                AddItemFn = {this.props.AddItemFn} 
-                IncreaseItemFn = {this.props.IncreaseItemFn} 
-                DecreaseItemFn = {this.props.DecreaseItemFn} 
-                RemoveItemFn= {this.props.RemoveItemFn}
-                ></ProductCard>
+                <ProductCard {...this.props}></ProductCard>
             </Grid>
        );
     }

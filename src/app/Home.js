@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from "react-router-dom";
 import ProductGroceryList from './grocery/components/ProductGroceryList'
+import UserGroceryList from './grocery/components/Cart/UserGroceryList'
 
 export default class Home extends Component {
     render(){
@@ -13,6 +14,10 @@ export default class Home extends Component {
                     <li><NavLink to="/AddItem">Add Item</NavLink></li>
                 </ul>
                 <ProductGroceryList />
+                <br/>
+                <br/>
+                <br/>
+                <UserGroceryList />
                 </div>
         );
     }

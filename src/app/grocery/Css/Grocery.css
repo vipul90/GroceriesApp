@@ -19,7 +19,6 @@
 .gridContainer{
     max-width: 200px;
 }
-
 .CardRoot{
     max-height: 200px;
 }
@@ -38,7 +37,51 @@
 
  .spanMargin {
     margin-left: 16px;
-    /* margin-right: 16px; */
     position: relative;
     top: 0.8em;
  }
+
+ .cardMedia{
+     width: 150px;
+     background-color: red;
+ }
+ .spanCrossRendering{
+    font-size: 0.8em;
+ }
+ .priceCell{
+     font-size: 1.2em;
+ }
+ .totalCell{
+    font-size: 1.2em;
+    text-align: right;
+    width: 75%;
+ }
+ .deleteCell{
+    text-align: right;
+    /* padding-right: .5em; */
+ }
+
+ .deleteCell2{
+    text-align: center;
+    /* padding-right: .5em; */
+ }
+
+ .gridCell{
+     padding-top: .1em;
+ }
+
+.bottomDiv{
+    height: 100%;
+}
+
+.priceDiv{
+    height: 50%;
+    padding-top: 15%;
+    font-size: 1.2em;
+}
+
+.priceDivOld{
+    height: 50%;
+    padding-top: 15%;
+    font-size: 1.2em;
+}

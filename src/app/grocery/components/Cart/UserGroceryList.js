@@ -1,12 +1,12 @@
 import React from 'react'
 import { Grid } from '@material-ui/core';
-import '../Css/Grocery'
-import ProductItem from './ProductItem'
+import '../../Css/Grocery'
+import UserGroceryItem from './UserGroceryItem'
 import {connect} from 'react-redux'
-import * as actionCreators from '../../action/actionCreators'
+import * as actionCreators from '../../../action/actionCreators'
 import {bindActionCreators} from 'redux'
 
-class ProductGroceryList extends React.Component {
+class UserGroceryList extends React.Component {
     constructor(props){
         super(props);
     }
@@ -14,16 +14,17 @@ class ProductGroceryList extends React.Component {
     render(){
         return (
             <div>
-                <Grid container spacing={3} >
-                {this.props.AvailableGroceries.map(item=>{
-                      return <ProductItem 
+                <Grid container spacing = {2}>
+                {this.props.UserGroceries.map(item=>{
+                      return <UserGroceryItem 
                       key={item.ItemId} 
-                      ProductDetail = {item}
+                      UserDataForItem = {item}
                       AddItemFn = {this.props.AddItemInUserGroceryList}
                       IncreaseItemFn = {this.props.IncreaseItemInUserGroceryList}
                       DecreaseItemFn = {this.props.DecreaseItemInUserGroceryList}
                       RemoveItemFn = {this.props.RemoveItemInUserGroceryList} 
-                      UserDataForItem = {this.props.UserGroceries.find(x=>x !==undefined && x.ItemId == item.ItemId) }></ProductItem>
+                      ProductDetail = {this.props.AvailableGroceries.find(x => x !==undefined && x.ItemId == item.ItemId) }>
+                      </UserGroceryItem>
                 })}
                 </Grid>
             </div>
@@ -44,4 +45,4 @@ const mapStateToProps = (state) =>{
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(ProductGroceryList);
+export default connect(mapStateToProps,mapDispatchToProps)(UserGroceryList);
