@@ -29,5 +29,9 @@ module.exports = {
     resolve:{
         extensions:['.js','.css']
     },
-    plugins: [htmlPlugin]
+    plugins: [htmlPlugin],
+    devServer: {
+        port: 3005,
+        historyApiFallback: true
+      }
 }

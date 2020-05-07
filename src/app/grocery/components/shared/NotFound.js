@@ -1,4 +1,5 @@
 import React from 'react'
+import {  Redirect } from "react-router-dom";
 
 class NotFound extends React.Component {
     constructor(props){
@@ -7,7 +8,7 @@ class NotFound extends React.Component {
     render(){
         return(
             <div>
-                URL is not Valid. Please enter valid URL.
+                <Redirect to="/" />
             </div>
         )
     }
