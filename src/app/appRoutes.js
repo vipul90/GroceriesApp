@@ -5,7 +5,7 @@ import {history } from './services/history'
 import Home from './Home';
 import Store from './store/store';
 import { Provider } from 'react-redux';
-import ProductGroceryList from './grocery/components/ProductGroceryList';
+import ProductGroceryList from './grocery/components/product/ProductGroceryList';
 
 export default class AppRoutes extends React.Component {
     render(){

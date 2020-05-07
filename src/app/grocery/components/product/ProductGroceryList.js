@@ -1,9 +1,9 @@
 import React from 'react'
 import { Grid } from '@material-ui/core';
-import '../Css/Grocery'
+import '../../Css/Grocery'
 import ProductItem from './ProductItem'
 import {connect} from 'react-redux'
-import * as actionCreators from '../../action/actionCreators'
+import * as actionCreators from '../../../action/actionCreators'
 import {bindActionCreators} from 'redux'
 import "@babel/polyfill"
 
