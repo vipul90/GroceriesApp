@@ -4,6 +4,8 @@ import {Grid,Typography} from '@material-ui/core';
 // import Typography from '@material-ui/core/Typography';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import HomeIcon from '@material-ui/icons/Home';
+import CustomCarouselControl from './grocery/components/shared/carousel/CarouselControl'
+import Paneer from './grocery/assests/Paneer.jpg'
 
 export default class Home extends Component {
     render(){
@@ -13,17 +15,22 @@ export default class Home extends Component {
                     <Grid container className="">
                         <Grid item xs={10} sm={10} md={10} lg={10}>
                                 <NavLink to="/"><HomeIcon style={{ fontSize: 48,color: 'black' }}></HomeIcon></NavLink>
-                        </Grid> 
+                        </Grid>
                         <Grid item xs={2} sm={2} md={2} lg={2} className="gridRightAlign">
                                 <NavLink to="/AddItem"><ShoppingCartIcon style={{ fontSize: 48,color: 'black' }}></ShoppingCartIcon></NavLink>
-                        </Grid> 
+                        </Grid>
                     </Grid>
+
                     <Grid item xs={12} sm={12} md={12} lg={12} >
                         <Typography component="h3" variant="h4">
                             Grocery App
                         </Typography>
-                    </Grid> 
-                </Grid>      
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} >
+                        {/* <CustomCarouselControl></CustomCarouselControl> */}`
+                        {/* <img src={Paneer}></img> */}
+                    </Grid>
+                </Grid>
                 <br />
             </div>
                 // <div>

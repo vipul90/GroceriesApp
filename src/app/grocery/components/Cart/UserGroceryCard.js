@@ -59,8 +59,8 @@ export default function UserGroceryCard(props) {
     <Card className={styles.cardRoot}>
       <CardMedia
         className="cardMedia"
-        image="/static/images/cards/live-from-space.jpg"
-        title="Live from space album cover" />
+        image={productDetail.ImageName}
+        title={productDetail.ItemName} />
       <div className={styles.divDetails}>
         <CardContent className={styles.cardContent}>
         <div>         
@@ -102,7 +102,6 @@ export default function UserGroceryCard(props) {
         </CardContent>
         <div className={styles.bottomDivDetails}>
             <CardContent className={styles.cardContent}>
-                <div>
                 <Grid container>
                     <Grid item xs={4} sm={3} md={3} lg={2}>
                             <AddCartButton {...props}/>
@@ -115,12 +114,11 @@ export default function UserGroceryCard(props) {
                             <strong>&#x20B9;{productDetail.Price}</strong>
                         </span>
                     </Grid>
-                    <Grid item xs={2} sm={2}  md={1} lg={1} className="priceItem" >
+                    <Grid item xs={2} sm={2}  md={1} lg={1} >
                         <div className="priceCell"><strong>&#x20B9;{userDetail.Total}</strong></div>
                     </Grid>
                 
                 </Grid>
-                </div>
             </CardContent>
         </div>
         

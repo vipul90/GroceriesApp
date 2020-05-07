@@ -5,13 +5,8 @@ import Home from './Home';
 import Store from './store/store';
 import { Provider } from 'react-redux';
 import ProductGroceryList from './grocery/components/product/ProductGroceryList';
-// import UserGroceryList from './grocery/components/cart/UserGroceryList';
 import ErrorBoundary from './grocery/components/error-boundary/error-boundary'
 import LazyComponent from './grocery/components/LazyComponent'
-import NotFound from './grocery/components/shared/NotFound'
-// const UserGroceryList = lazyLoadComponent(() => import('./grocery/components/Cart/UserGroceryList').then(module => module.default));
-// const NotFound = lazyLoadComponent(() => import('./grocery/components/shared/NotFound').then(module => module.default));
-// const UserGroceryList = lazyLoadComponent(() => import('./grocery/components/Cart/UserGroceryList'));
 
 const usergroceryLazy = React.lazy(()=> import('./grocery/components/Cart/UserGroceryList'));
 const UserGroceryList = (props) =><LazyComponent component={usergroceryLazy} {...props} ></LazyComponent>

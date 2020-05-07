@@ -45,8 +45,9 @@ class AddCartButton extends React.Component {
                     <span className="spanCardActions">{userDetail.Quantity}</span>
                     {userDetail.Quantity !== productDetail.Quantity ?
                         <AddCircleOutlineIcon  onClick={this.IncreaseUserGroceryItem.bind(this,userDetail.Id)}/> :
-                        <Tooltip title="You can't add more items" arrow>
-                        <AddCircleOutlineIcon />
+                        <Tooltip title=
+                        {<div><div><strong>Limited quanity available.</strong></div>You can't add more of this item</div>} arrow>
+                            <AddCircleOutlineIcon style={{color:'lightgrey'}} />
                         </Tooltip>}
                 </div>)}
           </React.Fragment>
