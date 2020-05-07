@@ -2,8 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux';
 import GroceryListItem from './GroceryListItem'
 import '../Css/Grocery.css'; 
-import GroceryDetailItem from '../../Helpers/GroceryDetailItem'
-import * as actions from '../../action/actionCreators'
+import GroceryDetailItem from '../../../Helpers/GroceryDetailItem'
+import * as actions from '../../../action/actionCreators'
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import {Button} from '@material-ui/core'

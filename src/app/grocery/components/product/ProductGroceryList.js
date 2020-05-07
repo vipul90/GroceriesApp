@@ -15,7 +15,7 @@ class ProductGroceryList extends React.Component {
     render(){
         return (
             <div>
-                <Grid container spacing={2} >
+                <Grid container spacing={4} >
                 {this.props.AvailableGroceries.map(item=>{
                       return <ProductItem 
                       key={item.ItemId} 

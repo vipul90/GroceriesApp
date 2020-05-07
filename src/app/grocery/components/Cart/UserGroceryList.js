@@ -30,7 +30,6 @@ class UserGroceryList extends React.Component {
                 })}
                 </Grid>
                 <div>
-                    {/* {this.props.UserGroceries.length > 0 ? */}
                 <Grid container>
                     <Grid item xs={12} sm={12}  md={10} lg={12} className="">
                         <hr />
@@ -56,7 +55,6 @@ class UserGroceryList extends React.Component {
 UserGroceryList.propTypes = {
     UserGroceries: PropTypes.array,
     AvailableGroceries: PropTypes.array,
-    UserDataForItem: PropTypes.Object,
     AddItemInUserGroceryList: PropTypes.func,
     IncreaseItemInUserGroceryList: PropTypes.func,
     DecreaseItemInUserGroceryList: PropTypes.func,

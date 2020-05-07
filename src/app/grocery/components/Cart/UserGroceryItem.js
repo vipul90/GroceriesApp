@@ -2,17 +2,10 @@ import React from 'react'
 import { Grid } from '@material-ui/core';
 import UserGroceryCard from './UserGroceryCard';
 
-class UserGroceryItem extends React.Component {
-    constructor(props){
-        super(props);
-    }
-    render(){
+export default function UserGroceryItem(props)  {
        return (
             <Grid item xs={12} sm={12}  md={12} lg={12} className="gridCell">
-                <UserGroceryCard {...this.props}></UserGroceryCard>
+                <UserGroceryCard {...props}></UserGroceryCard>
             </Grid>
        );
-    }
 }
-
-export default UserGroceryItem;

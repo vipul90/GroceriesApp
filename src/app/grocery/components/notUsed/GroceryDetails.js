@@ -3,10 +3,10 @@ import DetailLineItem from './DetailLineItem';
 import '../Css/Grocery.css'; 
 import {Button} from '@material-ui/core'
 
-import GroceryDetailItem from '../../Helpers/GroceryDetailItem'
+import GroceryDetailItem from '../../../Helpers/GroceryDetailItem'
 import { connect } from 'react-redux';
-import * as actions from '../../action/actionCreators'
-import DateValue from '../../Helpers/Utils'
+import * as actions from '../../../action/actionCreators'
+import DateValue from '../../../Helpers/Utils'
 
 class GroceryDetails extends React.Component {
 

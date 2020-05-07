@@ -1,20 +1,14 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
+import {Card,CardActionArea,CardActions,CardContent,CardMedia,Typography }from '@material-ui/core';
+// import CardActionArea from '@material-ui/core/CardActionArea';
+// import CardActions from '@material-ui/core/CardActions';
+// import CardContent from '@material-ui/core/CardContent';
+// import CardMedia from '@material-ui/core/CardMedia';
+// import Typography from '@material-ui/core/Typography';
 import AddCartButton from '../shared/AddCartButton'
 
-
-class ProductCard extends React.Component {
-    constructor(props){
-        super(props);
-    }
-    
-render(){
-    const productDetail = this.props.ProductDetail;
+export default function ProductCard(props){
+  const productDetail = props.ProductDetail;
   return (
     <Card className="CardRoot">
       <CardActionArea>
@@ -38,11 +32,11 @@ render(){
         <strong>&#x20B9;{productDetail.Price}</strong>
         </span>
       <CardActions className="CardButton">
-        <AddCartButton {...this.props}/>
+        <AddCartButton {...props}/>
       </CardActions>
       </div>
     </Card>
-  );
-}}
+  )
+};
 
-export default ProductCard;
+

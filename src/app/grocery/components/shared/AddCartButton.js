@@ -34,9 +34,10 @@ class AddCartButton extends React.Component {
         const productDetail = this.props.ProductDetail;
        return (
            <React.Fragment>
-                {(userDetail===undefined || userDetail.Quantity === 0) ? <Button variant="contained" color="primary" size="small" 
+                {(userDetail===undefined || userDetail.Quantity === 0) ? <Button variant="contained" 
+                style={{backgroundColor: 'lightskyblue'}} size="small" 
                 onClick={this.AddUserGroceryItem.bind(this,productDetail.ItemId,productDetail.Price)}>
-                Add To Cart
+                <strong>Add To Cart</strong>
                 </Button> : 
                 (<div >
                     <RemoveCircleOutlineIcon 

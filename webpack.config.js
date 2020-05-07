@@ -7,9 +7,10 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-    entry:"./src/index.js",
+    entry:["./src/index.js"],
     output:{
-        filename : "bundle.js"
+        filename: '[name].bundle.js',
+        chunkFilename: '[name].bundle.js',
     },
     module:{
         rules: [
