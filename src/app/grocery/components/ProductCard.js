@@ -43,6 +43,6 @@ render(){
       </div>
     </Card>
   );
-}};
+}}
 
 export default ProductCard;

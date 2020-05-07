@@ -40,7 +40,7 @@ export default class GroceryListItem extends React.Component {
         });
     }
 
-    SaveFunction(event){
+    SaveFunction(){
         // const updatedValue = event.target.value;
         const updatedObj = new GroceryDetailItem(this.props.ItemDetail.ItemId,this.state.ItemName,this.state.Quantity,DateValue)
         this.setState({
@@ -55,7 +55,7 @@ export default class GroceryListItem extends React.Component {
         this.setState({
             Quantity :quantity
         });
-      };
+      }
     render(){
         const itemId = this.props.ItemDetail.ItemId;
         const isEditable = this.state.IsEditable;

@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 import * as actionCreators from '../../../action/actionCreators'
 import {bindActionCreators} from 'redux'
 import "@babel/polyfill"
+import PropTypes from "prop-types";
 
 class UserGroceryList extends React.Component {
     constructor(props){
@@ -52,6 +53,15 @@ class UserGroceryList extends React.Component {
     }
 }
 
+UserGroceryList.propTypes = {
+    UserGroceries: PropTypes.array,
+    AvailableGroceries: PropTypes.array,
+    UserDataForItem: PropTypes.Object,
+    AddItemInUserGroceryList: PropTypes.func,
+    IncreaseItemInUserGroceryList: PropTypes.func,
+    DecreaseItemInUserGroceryList: PropTypes.func,
+    RemoveItemInUserGroceryList: PropTypes.func,
+  };
 const mapDispatchToProps = (dispatch) =>{
     return {
         ...bindActionCreators(actionCreators,dispatch)

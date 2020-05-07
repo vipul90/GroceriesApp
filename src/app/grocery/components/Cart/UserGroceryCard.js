@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -13,8 +13,9 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
+import PropTypes from "prop-types";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   cardRoot: {
     display: 'flex',
   },
@@ -85,7 +86,7 @@ export default function UserGroceryCard(props) {
                     <Button variant="contained"  onClick={handleClose} color="primary" autoFocus>
                         No
                     </Button>
-                    <Button variant="contained" onClick={(e) => {RemoveItemFromrGroceryList(userDetail.Id)}} color="primary">
+                    <Button variant="contained" onClick={() => {RemoveItemFromrGroceryList(userDetail.Id)}} color="primary">
                         Yes
                     </Button>
                    
@@ -126,3 +127,9 @@ export default function UserGroceryCard(props) {
     </Card>
   );
 }
+
+UserGroceryCard.propTypes = {
+  ProductDetail: PropTypes.Object,
+  UserDataForItem: PropTypes.Object,
+  RemoveItemFn: PropTypes.func
+};

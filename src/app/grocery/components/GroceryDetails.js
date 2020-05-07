@@ -30,7 +30,7 @@ class GroceryDetails extends React.Component {
     }
 }
 
-export default connect((state, props) =>{
+export default connect((state) =>{
     return {
         Groceries : state.GroceryDetails
     }
