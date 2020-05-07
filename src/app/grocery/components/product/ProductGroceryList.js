@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 import * as actionCreators from '../../../action/actionCreators'
 import {bindActionCreators} from 'redux'
 import "@babel/polyfill"
+import CustomCarouselControl from '../shared/carousel/CarouselControl'
 
 class ProductGroceryList extends React.Component {
     constructor(props){
@@ -15,6 +16,11 @@ class ProductGroceryList extends React.Component {
     render(){
         return (
             <div>
+                 <Grid item xs={12} sm={12} md={12} lg={12} >
+                        <CustomCarouselControl></CustomCarouselControl>`
+                        {/* <img src={Paneer}></img> */}
+                    </Grid>
+
                 <Grid container spacing={4} >
                 {this.props.AvailableGroceries.map(item=>{
                       return <ProductItem 

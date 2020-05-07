@@ -2,14 +2,15 @@ import React from 'react'
 import Carousel from 'react-material-ui-carousel'
 import CarouselItems from '../../../../Helpers/carouselItems';
 import CarouselItem from './CarouselItem'
+import '../../../Css/Grocery'
 
 export default function CustomCarouselControl(props)
 {
      return (
-        <Carousel>
+        <Carousel className="carouselParent">
             {
                 CarouselItems.map(item => {
-                   return <CarouselItem item={item} />
+                   return <CarouselItem key={item.id} item={item} />
                 })
             }
         </Carousel>

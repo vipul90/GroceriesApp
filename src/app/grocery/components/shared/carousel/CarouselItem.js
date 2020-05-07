@@ -5,13 +5,8 @@ import {Paper,Button} from '@material-ui/core'
 export default function CarouselItem(props)
 {
     return (
-        <Paper>
-            <h2>{props.item.name}</h2>
-            <p>{props.item.description}</p>
- 
-            <Button className="CheckButton">
-                Check it out!
-            </Button>
-        </Paper>
+        <div>
+            <img className="carouselImage" src={props.item.ItemImage} alt={props.item.Name} />
+        </div>
     )
 }

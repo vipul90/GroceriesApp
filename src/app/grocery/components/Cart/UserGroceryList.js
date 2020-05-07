@@ -18,8 +18,7 @@ class UserGroceryList extends React.Component {
             <div>
                 <div className="myCartGrid"><strong>My Shopping Cart</strong></div> 
                 {this.props.TotalQuantity > 0 ? 
-                (<div>
-                    <Grid container>
+                ( <div><Grid container>
                         <Grid item xs={12} >
                             <Grid container>
                                 <Grid item xs={10} sm={10}  md={10} lg={11} className="gridTotal">
@@ -47,8 +46,8 @@ class UserGroceryList extends React.Component {
                             ProductDetail = {this.props.AvailableGroceries.find(x => x !==undefined && x.ItemId == item.ItemId) }>
                             </UserGroceryItem>
                         })}
-                    </Grid>
-                </div>) : <EmptyCart /> }
+                    </Grid></div>) : 
+                <EmptyCart /> }
             </div>
         );
     }
