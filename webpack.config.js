@@ -37,11 +37,11 @@ module.exports = {
           ]
     },
     resolve:{
-        extensions:['.js','.css']
+        extensions:['.js','.css','.jpg']
     },
     plugins: [htmlPlugin],
     devServer: {
-        port: 3005,
+        port: 3000,
         historyApiFallback: true
       }
 }

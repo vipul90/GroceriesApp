@@ -11,6 +11,7 @@
 
 # testing
 /coverage
+__snapshots__
 
 # production
 /dist
