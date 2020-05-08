@@ -11,8 +11,7 @@ import LazyComponent from './grocery/components/LazyComponent'
 const usergroceryLazy = React.lazy(()=> import('./grocery/components/Cart/UserGroceryList'));
 const UserGroceryList = (props) =><LazyComponent component={usergroceryLazy} {...props} ></LazyComponent>
 
-export default class AppRoutes extends React.Component {
-    render(){
+export default function AppRoutes () {
       return (
          <React.Fragment>
             <Router history={history}>
@@ -34,5 +33,4 @@ export default class AppRoutes extends React.Component {
         
         </React.Fragment>
       )
-    }
 }

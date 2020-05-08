@@ -7,7 +7,6 @@ class ErrorBoundary extends React.Component {
   }
 
   static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI.
     return { error };
   }
 
@@ -17,7 +16,7 @@ class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.error) {
-      return <h1>Something went wrong.</h1>;
+      return <h1>Something went wrong.Please try again!!</h1>;
     }
 
     return this.props.children;

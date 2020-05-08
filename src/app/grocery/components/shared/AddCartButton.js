@@ -11,7 +11,6 @@ class AddCartButton extends React.Component {
         super(props);
     }
     AddUserGroceryItem(itemId,itemPrice){
-      console.log(itemPrice);
         let payload = new UserGroceryItem(-1,itemId,DateValue,1,itemPrice);
         this.props.AddItemFn(payload);
       }

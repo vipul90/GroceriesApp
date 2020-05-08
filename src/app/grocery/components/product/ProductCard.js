@@ -1,10 +1,5 @@
 import React from 'react';
 import {Card,CardActionArea,CardActions,CardContent,CardMedia,Typography }from '@material-ui/core';
-// import CardActionArea from '@material-ui/core/CardActionArea';
-// import CardActions from '@material-ui/core/CardActions';
-// import CardContent from '@material-ui/core/CardContent';
-// import CardMedia from '@material-ui/core/CardMedia';
-// import Typography from '@material-ui/core/Typography';
 import AddCartButton from '../shared/AddCartButton'
 
 export default function ProductCard(props){
@@ -29,11 +24,11 @@ export default function ProductCard(props){
       </CardActionArea>
       <div>
         <span className="spanMargin">
-        <strong>&#x20B9;{productDetail.Price}</strong>
+            <strong>&#x20B9;{productDetail.Price}</strong>
         </span>
-      <CardActions className="CardButton">
-        <AddCartButton {...props}/>
-      </CardActions>
+        <CardActions className="CardButton">
+          <AddCartButton {...props}/>
+        </CardActions>
       </div>
     </Card>
   )

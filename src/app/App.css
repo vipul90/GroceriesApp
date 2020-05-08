@@ -20,5 +20,9 @@ body{
   padding-left: 10px;
   padding-bottom: 2%;
   height: 100%;
-  /* background-color: red; */
+}
+
+.homeIcon{
+  font-size: 48px;
+  color: black;
 }

@@ -16,9 +16,8 @@ class ProductGroceryList extends React.Component {
     render(){
         return (
             <div data-test="ProductGroceryListComponent">
-                 <Grid item xs={12} sm={12} md={12} lg={12} >
+                 <Grid item xs={12} >
                         <CustomCarouselControl></CustomCarouselControl>`
-                        {/* <img src={Paneer}></img> */}
                     </Grid>
 
                 <Grid container spacing={4} >
