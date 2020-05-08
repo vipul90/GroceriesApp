@@ -1,9 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
-import ProductGroceryList from '../../grocery/components/product/ProductGroceryList';//ProductGroceryList
+import UserGroceryList from '../../grocery/components/cart/UserGroceryList';
 import initialState from '../../state/initialState'
-import toJson from 'enzyme-to-json'; //added this line
+import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
 
@@ -11,7 +11,7 @@ configure({adapter: new Adapter()});
 
 const createStore = configureStore([]);
  
-describe('My Product Grocery List Component', () => {
+describe('My User Grocery List Component', () => {
   let storeInstance;
   let componentInstance;
  
@@ -22,7 +22,7 @@ describe('My Product Grocery List Component', () => {
 
     componentInstance = shallow(
       <Provider store={storeInstance}>
-        <ProductGroceryList />
+        <UserGroceryList />
       </Provider>
     );
   });

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid } from '@material-ui/core';
-import '../../Css/Grocery'
+import '../../Css/Grocery.css'
 import UserGroceryItem from './UserGroceryItem'
 import {connect} from 'react-redux'
 import * as actionCreators from '../../../action/actionCreators'
@@ -8,6 +8,7 @@ import {bindActionCreators} from 'redux'
 import "@babel/polyfill"
 import PropTypes from "prop-types";
 import EmptyCart from './EmptyCart'
+
 class UserGroceryList extends React.Component {
     constructor(props){
         super(props);
@@ -61,6 +62,7 @@ UserGroceryList.propTypes = {
     DecreaseItemInUserGroceryList: PropTypes.func,
     RemoveItemInUserGroceryList: PropTypes.func,
   };
+  
 const mapDispatchToProps = (dispatch) =>{
     return {
         ...bindActionCreators(actionCreators,dispatch)
