@@ -6,7 +6,7 @@ import {Card,CardActionArea,CardActions,CardContent,CardMedia,Typography }from '
 // import CardMedia from '@material-ui/core/CardMedia';
 // import Typography from '@material-ui/core/Typography';
 import AddCartButton from '../shared/AddCartButton'
-import Paneer from '../../assests/Paneer.jpg';
+
 export default function ProductCard(props){
   const productDetail = props.ProductDetail;
   return (
@@ -37,6 +37,6 @@ export default function ProductCard(props){
       </div>
     </Card>
   )
-};
+}
 
 

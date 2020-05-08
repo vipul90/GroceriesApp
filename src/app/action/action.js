@@ -7,13 +7,7 @@ function GroceryDetails(state =initialState , action ){
 const {type, payload} = action;
     switch(type){
         case constants.ADD_USER_GROCERY_ITEM :
-            // console.log(state.CurrentItemId);
             payload.Id = state.CurrentItemId + 1;
-            //  console.log('test');
-            // var newList = Object.assign({},state.userGroceryItems,(payload));
-            //  console.log("Paylod is ",payload);
-            // var newState = Object.assign({},state,{userGroceryItems : state.userGroceryItems.concat(payload)});
-            // return newState;
             return { 
                 ...state,
                 userGroceryItems: [...state.userGroceryItems, payload],

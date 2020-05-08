@@ -1,6 +1,6 @@
 import GroceryDetailItem from '../Helpers/GroceryDetailItem'
 import DateValue from '../Helpers/Utils'
-import Paneer from '../grocery/assests/Paneer.jpg';
+import Paneer from '../grocery/assests/Paneer.jpg'
 
 const initialState = {
     loading: false,
