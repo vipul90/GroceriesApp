@@ -4,10 +4,8 @@ import configureStore from 'redux-mock-store';
 import ProductGroceryList from '../../grocery/components/product/ProductGroceryList';//ProductGroceryList
 import initialState from '../../state/initialState'
 import toJson from 'enzyme-to-json'; //added this line
-import Adapter from 'enzyme-adapter-react-16';
-import { shallow, configure } from 'enzyme';
-
-configure({adapter: new Adapter()});
+import { shallow } from 'enzyme';
+import '../../../setupTests'
 
 const createStore = configureStore([]);
  

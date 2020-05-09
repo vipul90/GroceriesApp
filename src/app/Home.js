@@ -1,16 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { NavLink } from "react-router-dom";
 import {Grid} from '@material-ui/core';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import HomeIcon from '@material-ui/icons/Home';
 import { makeStyles } from '@material-ui/core/styles';
+
 const useStyles = makeStyles(() => ({
     IconStyle: {
         fontSize: 48,
         color: 'black'
-    },
+    }
 }));
-export default function Home(props) {
+export default function Home() {
     const styles = useStyles();
         return (
             <div>

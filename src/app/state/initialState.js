@@ -3,7 +3,6 @@ import DateValue from '../Helpers/Utils'
 import Paneer from '../grocery/assests/Paneer.jpg'
 
 const initialState = {
-    loading: false,
     error: null,
     availableGroceryList:[
         new GroceryDetailItem(1,'Paneer',2,DateValue,80.50,'200 gm',Paneer),
@@ -32,11 +31,7 @@ const initialState = {
         new GroceryDetailItem(24,'Item 24',220,DateValue,1400,'5 Kg'),
 
     ],
-    userGroceryItems: [
-        // new GroceryDetailItem(1,'Item 1',2,DateValue),
-        // new GroceryDetailItem(2,'Item 2',3,DateValue),
-        // new GroceryDetailItem(3,'Item 3',4,DateValue)
-    ],
+    userGroceryItems: [],
     CurrentItemId:0
   };
 
